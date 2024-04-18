@@ -12,9 +12,17 @@ numeroTentativas = 10
 rodada = 1
 
 print('qual nivel dificuldade?')
-prin('(1)-facil, (2)-medio, (3)-dificil')
+print('(1)-facil, (2)-medio, (3)-dificil')
 
 nivel=int(input('defina o nivel:'))
+
+#vamos mudar o numero de tentativass conforme a dificuldade
+if(nivel ==1):
+    numeroTentativas=15
+elif(nivel==2):
+    numeroTentativas=8
+else:
+    numeroTentativas=5
 
 while(rodada <= numeroTentativas):
     print('Tentativa',rodada, 'de' , numeroTentativas)
