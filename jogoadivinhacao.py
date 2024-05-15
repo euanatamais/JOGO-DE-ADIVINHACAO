@@ -5,27 +5,25 @@ print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
 #Definindo o número secreto
-numeroSecreto = random.randrange(1,101)
+numeroSecreto = round(random.random()*100)
 #print(numeroSecreto)
 #Definindo o número de tentativas e rodada
-numeroTentativas = 10
+numeroTentativas = 0
 rodada = 1
-
-print('qual nivel dificuldade?')
-print('(1)-facil, (2)-medio, (3)-dificil')
-
-nivel=int(input('defina o nivel:'))
-
-#vamos mudar o numero de tentativass conforme a dificuldade
-if(nivel ==1):
-    numeroTentativas=15
-elif(nivel==2):
-    numeroTentativas=8
-else:
-    numeroTentativas=5
+pontos=1000
 
 while(rodada <= numeroTentativas):
     print('Tentativa',rodada, 'de' , numeroTentativas)
+
+nivel=int(input('defina o nivel:'))
+
+if(nivel==1){
+    numerotentativas=20;
+}elif(nivel==2){
+    numero de tentativas=10;
+}else{
+    numeros de tentativas=5;
+}
 
 #Recebendo o chute do jogador
     chuteString = input('Digite um número entre 1 e 100: ')
@@ -39,6 +37,8 @@ while(rodada <= numeroTentativas):
         print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!! O número secreto é um número maior')
+    pontos_perdidos=abs(numeroSecreto-chute);
+    pontos=pontos-pontos_perdidos
 
     #numeroTentativas = numeroTentativas - 1
     rodada = rodada + 1
