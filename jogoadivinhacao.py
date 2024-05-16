@@ -12,6 +12,9 @@ numeroTentativas = 0
 rodada = 1
 pontos=1000
 
+print('qual o nivel de dificuldade?')
+print('(1)-facil, (2)-medio (3)-dificil')
+
 while(rodada <= numeroTentativas):
     print('Tentativa',rodada, 'de' , numeroTentativas)
 
@@ -31,7 +34,7 @@ if(nivel==1){
 
 #Declarando as condições
     if (numeroSecreto == chute):
-        print('Você acertou!')
+        print('Você acertou! E sua pontuação foi: ', pontos)
         break
     elif(chute>numeroSecreto):
         print('Você errou!! O número secreto é um número menor')
