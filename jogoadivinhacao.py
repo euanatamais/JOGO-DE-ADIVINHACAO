@@ -20,13 +20,13 @@ while(rodada <= numeroTentativas):
 
 nivel=int(input('defina o nivel:'))
 
-if(nivel==1){
-    numerotentativas=20;
-}elif(nivel==2){
-    numero de tentativas=10;
-}else{
-    numeros de tentativas=5;
-}
+if(nivel==1):
+    numeroTentativas=20
+elif(nivel==2):
+    numeroTentativas=10
+else:
+    numeroTentativas=5
+
 
 #Recebendo o chute do jogador
     chuteString = input('Digite um número entre 1 e 100: ')
@@ -40,7 +40,7 @@ if(nivel==1){
         print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!! O número secreto é um número maior')
-    pontos_perdidos=abs(numeroSecreto-chute);
+    pontos_perdidos=abs(numeroSecreto-chute)
     pontos=pontos-pontos_perdidos
 
     #numeroTentativas = numeroTentativas - 1
